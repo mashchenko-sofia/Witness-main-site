@@ -37,111 +37,12 @@ const products = [
     },
 ];
 
+
+
 const btnsToCart = document.querySelectorAll('.btn-tocart');
 const cartContent = document.querySelector('.cart__content');
 const cartTotalPrice = document.querySelector('.cart__total-price');
 const btnBuy = document.querySelector('.btn-buy');
-
-
-// const updateCartItem = (item, p) => {
-
-//     item.children[3].innerHTML = `x${p.amount}`;
-//     item.children[4].innerHTML = `${p.price * p.amount}$`;
-// }
-
-// const storeItems = document.querySelectorAll('.store__list-item');
-// storeItems.forEach((item) => {
-//     item.addEventListener('click', () => {
-//         let product = products.find(p => p.id === parseInt(item.id[8]));
-
-//         document.querySelector('.c__hero').id = product.id;
-//         document.querySelector('.c__hero-name').innerHTML = product.name;
-//         document.querySelector('.c__hero-price').innerHTML = product.price + '$';
-//     })
-// })
-
-
-// const createCartItem = (p) => {
-//     let cartItem = `
-//         <div class="cart__content-item" id="item-${p.id}">
-//             <div class="cart__content-item-photo" url="${p.img}"></div>
-//             <div class="cart__content-item-name">${p.name}</div>
-//             <div class="cart__content-item-type">${p.type}</div>
-//             <div class="cart__content-item-amount">x${p.amount}</div>
-//             <div class="cart__content-item-price">${p.price * p.amount}$</div>
-//             <button class="btn btn-remove">[REMOVE]</button>
-//         </div>`
-//     document.querySelector('.cart__content').insertAdjacentHTML('beforeend', cartItem);
-// }
-
-// // let myCart = [];
-// let totalPrice = 0;
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     products = JSON.parse(localStorage.getItem('products'));
-//     if (products) {
-//         products.forEach((p) => {
-//             createCartItem(p);
-//         })
-//     }
-//     console.log (products)
-//     totalPrice = JSON.parse(localStorage.getItem('totalPrice'));
-//     cartTotalPrice.innerHTML = totalPrice + '$';
-
-//     const btnsRemove = document.querySelectorAll('.btn-remove');
-//     btnsRemove.forEach((btn) => {
-//         btn.addEventListener('click', () => {
-//             let product = products.find(p => p.id === parseInt(btn.parentElement.id[5]));
-//             product.amount = 0;
-    
-//             document.querySelector(`#item-${product.id}`).remove();
-//             // products.splice(product);
-//             localStorage.setItem('myCart', JSON.stringify());
-    
-//             totalPrice = products.reduce((acc, p) => acc + p.price * p.amount, 0);
-//             cartTotalPrice.innerHTML = totalPrice + '$';
-//             localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
-//         })
-//     })
-// })
-
-// btnsToCart.forEach((btn) => {
-//     btn.addEventListener('click', () => {
-//         let product = products.find(p => p.id === parseInt(btn.parentElement.id));
-//         product.amount++;
-
-//         let cartItem = document.querySelector(`#item-${product.id}`);
-
-//         if (myCart.includes(product)) {
-//             updateCartItem(cartItem, product);
-//         } else {
-//             myCart.push(product);
-//             createCartItem(product);
-//         }
-//         localStorage.setItem('myCart', JSON.stringify(myCart));
-
-//         const btnsRemove = document.querySelectorAll('.btn-remove');
-//         btnsRemove.forEach((btn) => {
-//             btn.addEventListener('click', () => {
-//                 let product = products.find(p => p.id === parseInt(btn.parentElement.id[5]));
-//                 product.amount = 0;
-
-//                 // document.querySelector(`#item-${product.id}`).remove();
-//                 myCart.splice(product);
-//             })
-//         })
-//         console.log(myCart)
-        
-//         totalPrice = products.reduce((acc, p) => acc + p.price * p.amount, 0);
-//         cartTotalPrice.innerHTML = totalPrice + '$';
-//         localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
-//     })
-// })
-
-
-
-
-
 
 
 
@@ -178,7 +79,6 @@ const createCartItem = (p) => {
 
 let myCart;
 let totalPrice;
-// localStorage.clear();
 
 document.addEventListener('DOMContentLoaded', () => {
     myCart = JSON.parse(localStorage.getItem('myCart'));
@@ -201,17 +101,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
             let item = document.querySelector(`#item-${product.id}`);
             item.remove();
-            // document.querySelector(`#item-${product.id}`).remove();
-            // myCart.splice(product);
             myCart = myCart.filter(p => p.id !== product.id);
             localStorage.setItem('myCart', JSON.stringify(myCart));
     
             totalPrice = myCart.reduce((acc, p) => acc + p.price * p.amount, 0);
             cartTotalPrice.innerHTML = totalPrice + '$';
             localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
-
-            // return;
-            console.log(myCart)
         })
     })
 })
@@ -223,7 +118,6 @@ btnsToCart.forEach((btn) => {
 
         let cartItem = document.querySelector(`#item-${product.id}`);
 
-        // console.log(1, myCart)
         if (product.amount > 1) {
             updateCartItem(cartItem, product);
         } else {
@@ -237,7 +131,6 @@ btnsToCart.forEach((btn) => {
             btn.addEventListener('click', () => {
                 let product = products.find(p => p.id === parseInt(btn.parentElement.id[5]));
                 product.amount = 0;
-                // console.log(product)
                 
                 let item = document.querySelector(`#item-${product.id}`);
                 item.remove();
@@ -246,17 +139,12 @@ btnsToCart.forEach((btn) => {
                 myCart = myCart.filter(p => p.id !== product.id);
                 localStorage.setItem('myCart', JSON.stringify(myCart));
 
-                // document.querySelector(`#item-${product.id}`).remove();
                 totalPrice = myCart.reduce((acc, p) => acc + p.price * p.amount, totalPrice);
                 cartTotalPrice.innerHTML = totalPrice + '$';
                 localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
-                // myCart.product.amount = 0;
-                // document.querySelector(`#item-${product.id}`).remove();
 
 
                 return;
-                // myCart.splice(product);
-                // console.log(myCart);
             })
         })
         console.log(myCart)

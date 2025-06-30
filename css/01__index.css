@@ -18,7 +18,3 @@
 @import url(./06__media-queries.css);
 @import url(./07__animation.css);
 @import url(./objects/cursor.css);
-
-.index {
-    background-image: url(/img/fon.png);
-}
