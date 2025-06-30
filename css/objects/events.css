@@ -1,0 +1,129 @@
+.events {
+    /* height: calc(100vh - var(--border-height) * 2); */
+    /* padding: 0; */
+
+    position: relative;
+    overflow: hidden;
+}
+.events > .c__hero {
+    top: 0px;
+    /* padding: 15px 40px 0 40px; */
+}
+
+.events__list {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    bottom: 20px;
+    padding: 0 200px;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    position: absolute;
+    scrollbar-width: none;
+}
+.events__list-item {
+    position: relative;
+
+    height: 250px;
+
+    transition: all 0.5s;
+}
+.events__list-item img {
+    height: 100%;
+    width: auto;
+}
+.events__list-item:hover {
+    cursor: pointer;
+
+    height: 450px;
+    border: 5px dashed var(--color-black);
+}
+.events__list-item::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-black);
+    opacity: 0.5;
+    transition: all 0.5s;
+
+}
+.events__list-item:hover::before {
+    opacity: 0;
+}
+
+
+
+/* 
+.events {
+    height: calc(100vh - var(--border-height) * 2);
+    padding: 0;
+
+    position: relative;
+    overflow: hidden;
+}
+.events > .c__hero {
+    padding: 15px 40px 0 40px;
+}
+
+.events__list {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    bottom: 20px;
+    padding: 0 200px;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    position: absolute;
+    scrollbar-width: none;
+
+}
+.events__list-item {
+    position: relative;
+
+    height: 250px;
+    min-width: 200px;
+
+    background-color: blue;
+    transition: all 0.5s;
+}
+.events__list-item:hover {
+    cursor: pointer;
+
+    height: 450px;
+    min-width: 300px;
+    background-color: chartreuse;
+}
+.events__list-item::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-black);
+    opacity: 0;
+    transition: all 0.5s;
+
+}
+.events__list-item:hover::before {
+    opacity: 0.5;
+
+}
+.events__list-item:hover::after {
+    content: "[SIGN UP]";
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+.events__list-item::after:hover {
+    color: white;
+}
+*/

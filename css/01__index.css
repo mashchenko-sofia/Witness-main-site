@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
+
+@import url(./02__reset.css);
+@import url(./03__custom-properties.css);
+@import url(./04__layout.css);
+
+@import url(./objects/mask.css);
+@import url(./objects/cart.css);
+@import url(./objects/btns.css);
+
+@import url(./objects/store.css);
+@import url(./objects/events.css);
+@import url(./objects/space.css);
+@import url(./objects/map.css);
+
+
+@import url(./06__media-queries.css);
+@import url(./07__animation.css);
+@import url(./objects/cursor.css);
+
+.index {
+    background-image: url(/img/fon.png);
+}

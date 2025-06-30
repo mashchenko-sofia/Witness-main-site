@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+
+    scrollbar-width: none;
+}
+
+
+
+body {
+    /* width: 100vw; */
+    min-height: 100%;
+
+    background: var(--color-black);
+
+    display: flex;
+    flex-direction: column;
+    overflow-x: clip;
+    /* scroll-behavior: smooth; */
+
+    font-family: "Jura", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-wrap: nowrap;
+
+    /* padding: var(--border-height) var(--border-width); */
+}
+
+
+
+.header {
+    height: var(--border-height);
+    width: 100%;
+
+    background: var(--color-black);
+    color: var(--color-aliceblue);
+
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    padding: 0 var(--border-width);
+
+    font-size: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    /* justify-content: center; */
+}
+.project-link::before {
+    content: '▊▊▊▊▊';
+    margin-right: 10px;
+}
+.project-link::after {
+    content: url(../img/arrow.svg);
+    margin-left: 10px;
+}
+.date {
+    display: flex;
+    justify-self: center;
+    gap: 5px;
+}
+.personal-link {
+    justify-self: end;
+} 
+
+
+
+.main {
+    margin: var(--border-height) var(--border-width) 0 var(--border-width);
+
+    display: flex;
+    column-gap: var(--border-width);
+
+
+    /* position: relative; */
+    /* padding-bottom: var(--border-height); */
+    /* width: calc(100vw - var(--border-width) * 2); */
+}
+/* .main-active {
+    width: 80vw;
+} */
+
+
+.content {
+    border-radius: 8px 8px 8px 8px;
+    position: relative;
+    min-height: calc(100vh - var(--border-height) * 2 - var(--mask-height));
+    width: calc(100vw - var(--border-width) * 2);
+
+    background: var(--color-white);
+    padding: 15px 40px var(--border-height) 40px; 
+}
+.content-active {
+    /* width: min(80vw, 300px); */
+}
+
+
+.c__hero {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    position: sticky;
+    top: 40px;
+    
+    /* background: white; */
+    /* backdrop-filter: blur(10px); */
+    /* text-wrap: nowrap; */
+    /* align-items: center; */
+}
+.c__hero-info {
+    display: flex;
+    gap: 45px;
+    /* text-wrap: nowrap; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+}
+.c__hero-btn {
+    /* align-self: end; */
+    justify-self: end;
+}
+
+
+.info {
+    margin: 0 var(--border-width);
+    color: white;
+}
+.info__links {
+    display: flex;
+    gap: 50px; /*60px*/
+}
+.info__link::after {
+    content: url(../img/arrow.svg);
+    margin-left: 10px;
+}
+.info__form {
+    max-width: 560px;
+    margin: 45px auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 18px;
+}
+.info__form-inputs {
+    justify-self: end;
+    /* text-wrap: wrap; */
+}
+.info__form-inputs input {
+    field-sizing: content;
+}
+.info__form-inputs span {
+    outline: none;
+    caret-color: auto;
+}
+#input-message {
+    text-wrap: wrap;
+}
+#input-message:empty::before {
+  content: "MESSAGE";
+  color: rgb(105, 105, 105);
+  outline: none;
+  caret-color: auto;
+}
+    
+
+
+/* AUTO-SIZING INPUT USING SPAN
+.info__form-inputs span {
+    outline: none;
+    caret-color: auto;
+}
+.input-name:empty::before {
+  content: "NAME";
+  color: gray;
+}
+.input-email:empty::before {
+  content: "EMAIL";
+  color: gray;
+}
+.input-message:empty::before {
+  content: "MESSAGE";
+  color: gray;
+} 
+*/
+.btn-send-form {
+    
+}
+
+
+
+.cart {
+    
+}
+
+
+
+
+
+
+
+.footer {
+    height: var(--border-height);
+    width: 100%;
+
+    background: var(--color-black);
+    color: var(--color-aliceblue);
+
+    position: fixed;
+    z-index: 50;
+    bottom: 0;
+    padding: 0 var(--border-width);
+
+    font-size: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+.btn-language {
+    justify-self: start;
+}
+.menu {
+    display: flex;
+    justify-self: center;
+    gap: 10px;
+}
+.btn-info {
+
+    /* transition: all 5s; */
+    /* transition: all 1s; */
+}
+.btn-info:hover::after {
+    content: ' -> [ABOUT / MAP]';
+    /* background-color: var(--color-aliceblue); */
+    width: 100px;
+}
+.btn-cart {
+    justify-self: end;
+}

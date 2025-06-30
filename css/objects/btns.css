@@ -1,0 +1,18 @@
+.btn {
+    width: fit-content;
+    height: fit-content;
+}
+.btn:hover {
+    background: white;
+    color: black;
+    border-radius: 2px;
+    padding: 1px 5px;
+}
+.btn-tocart:hover{
+    background: black;
+    color: white;
+}
+
+.link:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Witness</title>
+    <link rel="stylesheet" href="./css/01__index.css">
+    <link type="image/x-icon" href="./img/favicon.ico" rel="shortcut icon">
+    <link type="Image/x-icon" href="./img/favicon.ico" rel="icon">
+</head>
+
+<body>
+    <header class="header">
+        <a class="link project-link">HSE DESIGN PROJECT / WITNESS</a>
+        <div class="date">
+            <div class="day">D<span id="dayDisplay">30</span> /</div>
+            <div class="month">M<span id="monthDisplay">06</span> /</div>
+            <div class="year">Y<span id="yearDisplay">25</span></div>
+            <div class="time">15:07:33</div>
+        </div>
+        <a class="link personal-link">MASHCHENKO SOFIA @</a>
+    </header>
+    
+    <div class="round-corners-mask-top"><span></span></div>
+    <main class="main">
+        <div class="content store">
+            <div class="c__hero" id="1">
+                <div class="c__hero-info">
+                    <div class="c__hero-name">WITNESS-V001-MINI</div>
+                    <div class="c__hero-price">2500$</div>
+                </div>
+                <button class="c__hero-btn btn btn-tocart">[ADD TO CART]</button>
+            </div>
+            <div class="store__product">
+                <img class="c__hero-img" src="" alt="">
+            </div>
+            <!-- <div class="store__hero">
+                        <div class="store__hero-info">
+                            <div class="store__hero-name"></div>
+                            <div class="store__hero-price"></div>
+                            <button class="btn btn-tocart">[ADD TO CART]</button>
+                        </div>
+                        <div class="store__hero-img"></div>
+                    </div> -->
+            <div class="store__list">
+                <div class="store__list-item" id="product-1">
+                    <div class="store__item-name">WITNESS-V001-MIN</div>
+                    <div class="store__item-description">DESCRIPTION, WHERE I NEED TO WRITE SOMETHING DOWN. BUT I DON’T KNOW
+                        WHAT TO WRITE</div>
+                    <div class="store__item-type">DEVICE</div>
+                    <div class="store__item-price">2500$</div>
+                </div>
+                <div class="store__list-item" id="product-2">
+                    <div class="store__item-name">WITNESS-V001-PRO</div>
+                    <div class="store__item-description">DESCRIPTION, WHERE I NEED TO WRITE SOMETHING DOWN. BUT I DON’T KNOW
+                        WHAT TO WRITE</div>
+                    <div class="store__item-type">DEVICE</div>
+                    <div class="store__item-price">3990$</div>
+                </div>
+                <div class="store__list-item" id="product-3">
+                    <div class="store__item-name">BAG</div>
+                    <div class="store__item-description">DESCRIPTION, WHERE I NEED TO WRITE SOMETHING DOWN. BUT I DON’T KNOW
+                        WHAT TO WRITE</div>
+                    <div class="store__item-type">ACCESSORY</div>
+                    <div class="store__item-price">160$</div>
+                </div>
+                <div class="store__list-item" id="product-4">
+                    <div class="store__item-name">CHARGING CABLE</div>
+                    <div class="store__item-description">DESCRIPTION, WHERE I NEED TO WRITE SOMETHING DOWN. BUT I DON’T KNOW
+                        WHAT TO WRITE</div>
+                    <div class="store__item-type">ACCESSORY</div>
+                    <div class="store__item-price">55$</div>
+                </div>
+            </div>
+        </div>
+        <aside class="cart cart-active">
+            <div class="cart__wrapper">
+                <div class="cart__content"></div>
+                <div class="cart__footer">
+                    <div class="cart__total">
+                        <span>TOTAL:</span>
+                        <div class="cart__total-price">0</div>
+                    </div>
+                    <button class="btn btn-buy">[BUY]</button>
+                </div>
+
+            </div>
+        </aside>
+    </main>
+    <div class="round-corners-mask-bottom"><span></span></div>
+    <div class="info">
+        <div class="info__links">
+            <a href="" class="link info__link mail">EMAIL / CONTACTWITNESS@MAIL.RU</a>
+            <a href="" class="link info__link tel">TEL / 8 (987) 123 00 00</a>
+            <a href="" class="link info__link insta">INSTA / @WITNESSGRAMM</a>
+        </div>
+        <form class="info__form" action="">
+            <div class="info__form-inputs">
+                <input type="text" id="input-name" placeholder="NAME" autocomplete="true" required minlength="3"
+                    maxlength="30">
+                <span>/</span>
+                <input type="email" id="input-email" placeholder="EMAIL" autocomplete="true" required inputmode="email"
+                    maxlength="30">
+                <span>/</span>
+                <span role="textbox" id="input-message" contenteditable="true"></span>
+                <!-- <textarea id="input-message" placeholder="MESSAGE" autocomplete required maxlength="200"></textarea> -->
+                <!--
+                            <span class="input-name" role="textbox" contenteditable="true" autocomplete type="name"></span>
+                            <span>/</span>
+                            <span class="input-email" role="textbox" contenteditable="true" autocomplete type="email"></span>
+                            <span>/</span>
+                            <span class="input-message" role="textbox" contenteditable="true" autocomplete type="text"></span> 
+                            -->
+            </div>
+            <button class="btn btn-send-form" type="submit">[SEND]</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <a href="" class="btn btn-language">ENGLISH</a>
+        <nav class="menu">
+            <a class="btn btn-store" href="./store.html">[STORE]</a>
+            <a class="btn btn-events" href="./events.html">[EVENTS]</a>
+            <!-- <a class="btn btn-space" href="./space.html">[SPACE]</a> -->
+            <a class="btn btn-info" href="./map.html">[INFO]</a>
+        </nav>
+        <button class="btn btn-cart">CART</button>
+    </footer>
+
+    <div class="cursor"></div>
+
+    <script type="module" src="./js/store.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

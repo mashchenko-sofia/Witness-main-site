@@ -1,0 +1,8 @@
+.map {
+    background-image: url(/img/map-img.png);
+    /* background-attachment: local; */
+    background-position: center; 
+    /* object-fit: cover;  */
+    /* background-size: cover; */
+    /* background-color: aquamarine; */
+}

@@ -1,0 +1,10 @@
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-fadedblue: #d4e8e8;
+    --color-aliceblue: aliceblue;
+
+    --border-height: 25px;
+    --border-width: 10px;
+    --mask-height: 8px;
+}
